@@ -1,83 +1,7 @@
 //import java.lang.Character.isLetter
 import java.net.URI
 
-// Congratulations! You have been invited to do an online assessment for a
-// stealth company looking to create a new search engine. They are asking you to
-// prototype a:
-//    * web crawler, which fetches pages from a network and follows the links to
-//      connected pages
-//    * indexer, which creates an index from individual words to pages that have
-//      those words
-//    * retrieval engine, which determines which pages best answer a user's
-//       query
-//    * snippet generator, giving a preview of the search results
-//
-// They don't want anyone to know they are working on a search engine, so they
-// are asking you to fetch pages from a simulated network (provided in
-// SupportCode.kt), which returns pages stored in web.txt.
-//
-// 0. Watch the videos "Homework 5: Introduction" and "Homework 5: Overview"
-//    to get the big picture. Look over the provided code, documentation, and
-//    text file. You should look at the KDoc in SupportCode.kt but need not
-//    concern yourself with the implementation. Do not modify SupportCode.kt.
-/** DONE*/
-// 1. "Stop words" are words that are so common that search engines don't
-//    include them in indices. Research stop words online and change the
-//    initialization of stopWords so it is a set of 20 words, all lower-case,
-//    with no punctuation. Be sure to include your source of stop words in the
-//    summary.
-/** DONE*/
-//
-// 2. Prepare for writing addToIndex() by watching the video "Homework 5:
-//    Crawling and Indexing", watching the testAddToIndex() chapter of the video
-//    "Homework 5: Tests", and reading CrawlerTests.kt through testAddToIndex().
-//    If it is not clear to how how addToIndex() should behave, please talk to
-//    classmates or go to office hours. Once you understand the desired behavior,
-//    implement addToIndex() and make sure the tests pass. You don't need to
-//    write additional tests.
-/** DONE*/
-// 3. Prepare for writing crawl() by reviewing prior videos as needed, watching
-//    the testCrawl() chapter of the video "Homework 5: Tests" and reading
-//    testCrawl() in CrawlerTests.kt. Once you understand the desired behavior,
-//    implement crawl(). Uncomment testCrawl() from runTests() and make sure all
-//    tests pass before proceeding.
-/** DONE*/
-// 4. Prepare for writing makeSnippet() by reading its KDoc and testMakeSnippet().
-//    After implementing makeSnippet(), uncomment testMakeSnippet from runTests()
-//    and make sure all tests pass.
-/** DONE*/
-// 5. Prepare for writing getSearchResults() by reading its KDoc and reviewing
-//    the overview video, if that would be helpful.
-/** DONE*/
-// 6. Test the whole system by calling simulateWebServer(), which is implemented
-//    in SupportCode.kt but can be called from this file's main() method. Turn
-//    in a transcript showing the results for queries for "still" and "poetry".
-
-//
-// SUMMARY OF CHANGES
-//
-// The only methods you are required to entirely write are:
-// - addToIndex()
-// - crawl()
-// - makeSnippet()
-//
-// You are required to complete the implementation of:
-// - getSearchResults()
-// Do not replace the bits of code that were provided for you.
-//
-// You are not required to write any KDoc.
-//
-// The only non-method functions you are required to modify are:
-// - runTests() [to call code that is currently commented out]
-// - main()     [to call runTests() and simulateWebServer()]
-//
-// You may add tests to the existing functions (or add new test functions)
-// if it helps you debug your code, but you are not required to and will
-// not get extra credit.
-//
-// You may add "helper" functions, such as retainLettersAndSpaces() from class.
-// These do not require KDoc.
-
+ stored in web.txt..
 class Crawler {
     val stopWords = setOf(
         "and",
@@ -189,7 +113,7 @@ class Crawler {
         //    word. Add an entry to the index with:
         //     - key: the word
         //     - value: a mutable list containing the web page
-        // 3. Otherwise, if we got a list of pages known to have the word, add
+        // 3. Otherwise, if we have a list of pages known to have the word, add
         //    this page to that list.
     }
 
@@ -309,6 +233,7 @@ fun main() {
     runTests()
     simulateWebServer()
 }
+
 
 
 
